@@ -30,7 +30,11 @@ public class App {
     private void handleListPages(){
 
         Article[] articles = pageService.listTopPages(consoleService.getDate());
-        consoleService.printPages(articles);
+        if(articles!= null) {
+            consoleService.printPages(articles);
+        }else{
+            consoleService.notFound();
+        }
     }
 
 }

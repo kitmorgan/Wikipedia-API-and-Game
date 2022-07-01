@@ -68,4 +68,8 @@ public class ConsoleService {
         }
     }
 
+    public void notFound(){
+        System.out.println("Not found");
+    }
+
 }

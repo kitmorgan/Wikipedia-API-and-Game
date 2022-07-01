@@ -25,6 +25,7 @@ public class PageService {
         try{base = restTemplate.getForObject(API_TOP_URL + date, WikipediaBase.class);
         } catch (RestClientResponseException | ResourceAccessException e) {
             BasicLogger.log(e.getMessage());
+            return null;
         }
         return base.getItem()[0].getArticles();
     }
